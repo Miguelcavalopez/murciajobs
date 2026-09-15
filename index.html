@@ -1,12 +1,20 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MurciaJobs · Conecta talento local</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --navy: #1a2b6b;
@@ -22,7 +30,10 @@
       --white: #ffffff;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--gray-50);
@@ -31,7 +42,10 @@
       line-height: 1.6;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 100%);
       padding: 64px 24px 96px;
@@ -39,15 +53,28 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position: absolute;
-      top: -120px; right: -120px;
-      width: 420px; height: 420px;
+      top: -120px;
+      right: -120px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(46,196,182,0.14) 0%, transparent 70%);
+      background: radial-gradient(
+        circle,
+        rgba(46,196,182,0.14) 0%,
+        transparent 70%
+      );
     }
-    .hero-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .hero-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
 
     .logo-wrap {
       background: var(--white);
@@ -61,7 +88,12 @@
       box-shadow: 0 12px 32px rgba(0,0,0,0.25);
       padding: 14px;
     }
-    .logo-wrap img { width: 100%; height: auto; display: block; }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     .hero h1 {
       font-family: 'Sora', sans-serif;
@@ -72,10 +104,12 @@
       margin-bottom: 14px;
       letter-spacing: -0.02em;
     }
+
     .hero h1 em {
       color: var(--teal-light);
       font-style: normal;
     }
+
     .hero-sub {
       font-size: 16px;
       color: rgba(255,255,255,0.62);
@@ -84,19 +118,25 @@
       margin: 0 auto;
     }
 
-    /* PORTALES */
+
+    /* =========================
+       PORTALES
+    ========================= */
+
     .portales {
       max-width: 640px;
       margin: -56px auto 0;
-      padding: 0 24px 72px;
+      padding: 0 24px 60px;
       position: relative;
       z-index: 2;
     }
+
     .portales-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
+
     .portal-card {
       background: var(--white);
       border-radius: 16px;
@@ -110,23 +150,30 @@
       box-shadow: 0 4px 20px rgba(17,29,74,0.08);
       transition: transform 0.15s, box-shadow 0.15s;
     }
+
     .portal-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 28px rgba(17,29,74,0.14);
     }
+
     .portal-logo {
-      width: 52px; height: 52px;
+      width: 52px;
+      height: 52px;
       border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 20px;
       font-weight: 700;
       font-family: 'Sora', sans-serif;
     }
+
     .portal-name {
       font-size: 15px;
       font-weight: 600;
       color: var(--navy);
     }
+
     .portal-type {
       font-size: 12px;
       color: var(--gray-500);
@@ -139,14 +186,180 @@
       margin-top: 20px;
     }
 
-    /* CTA ASESORÍA */
+
+    /* =========================
+       OFERTAS DESTACADAS
+    ========================= */
+
+    .ofertas {
+      background: var(--gray-50);
+      padding: 20px 24px 70px;
+    }
+
+    .ofertas-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .ofertas-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .ofertas-label {
+      display: inline-block;
+      background: rgba(46,196,182,0.12);
+      color: #168f84;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .ofertas-header h2 {
+      font-family: 'Sora', sans-serif;
+      color: var(--navy);
+      font-size: clamp(22px, 4vw, 28px);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .ofertas-header p {
+      color: var(--gray-500);
+      font-size: 14px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       TARJETAS DE EMPLEO
+    ========================= */
+
+    .empleos-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .empleo-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 4px 20px rgba(17,29,74,0.08);
+      border: 1px solid rgba(221,225,240,0.8);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .empleo-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 26px rgba(17,29,74,0.12);
+    }
+
+    .empleo-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .empleo-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #e9faf7;
+      color: #168f84;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .empleo-info {
+      flex: 1;
+    }
+
+    .empleo-info h3 {
+      font-family: 'Sora', sans-serif;
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .empleo-empresa {
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    .empleo-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .empleo-tag {
+      background: var(--gray-100);
+      color: #59617f;
+      font-size: 12px;
+      padding: 5px 9px;
+      border-radius: 7px;
+    }
+
+    .empleo-description {
+      font-size: 13px;
+      color: #5f6684;
+      margin-bottom: 18px;
+    }
+
+    .empleo-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 18px;
+      border-radius: 9px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .empleo-btn:hover {
+      background: #26a99d;
+      transform: translateY(-1px);
+    }
+
+    .empleo-source {
+      text-align: center;
+      font-size: 11px;
+      color: #9aa0bb;
+      margin-top: 9px;
+    }
+
+
+    /* =========================
+       CTA ASESORÍA
+    ========================= */
+
     .cta-asesoria {
       background: var(--white);
       padding: 48px 24px;
       text-align: center;
       border-top: 1px solid var(--gray-200);
     }
-    .cta-inner { max-width: 480px; margin: 0 auto; }
+
+    .cta-inner {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
     .cta-asesoria h2 {
       font-family: 'Sora', sans-serif;
       font-size: clamp(19px, 3vw, 24px);
@@ -154,11 +367,13 @@
       color: var(--navy);
       margin-bottom: 10px;
     }
+
     .cta-asesoria p {
       font-size: 14px;
       color: var(--gray-500);
       margin-bottom: 22px;
     }
+
     .cta-btn {
       display: inline-block;
       background: var(--teal);
@@ -170,83 +385,521 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .cta-btn:hover { background: #26a99d; }
 
-    /* FOOTER */
+    .cta-btn:hover {
+      background: #26a99d;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       background: var(--navy-dark);
       padding: 28px 24px;
       text-align: center;
     }
+
     .footer-copy {
       font-size: 12px;
       color: rgba(255,255,255,0.35);
     }
 
+
+    /* =========================
+       MÓVIL
+    ========================= */
+
     @media (max-width: 480px) {
-      .portales-grid { grid-template-columns: 1fr 1fr; }
-      .portal-card { padding: 20px 12px; }
+
+      .portales-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .portal-card {
+        padding: 20px 12px;
+      }
+
+      .ofertas {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .empleo-card {
+        padding: 18px;
+      }
+
+      .empleo-info h3 {
+        font-size: 16px;
+      }
+
     }
+
   </style>
 </head>
+
+
 <body>
 
-  <!-- HERO -->
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
   <section class="hero">
+
     <div class="hero-inner">
+
       <div class="logo-wrap">
-        <img src="data:image/webp;base64,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" alt="MurciaJobs">
+
+        <img
+          src="data:image/webp;base64,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"
+          alt="MurciaJobs"
+        >
+
       </div>
-      <h1>Encuentra trabajo en<br><em>Murcia</em>, en un click</h1>
-      <p class="hero-sub">Accede directamente a las ofertas de empleo en Murcia de los portales más importantes.</p>
+
+      <h1>
+        Encuentra trabajo en<br>
+        <em>Murcia</em>, en un click
+      </h1>
+
+      <p class="hero-sub">
+        Accede directamente a las ofertas de empleo en Murcia
+        de los portales más importantes.
+      </p>
+
     </div>
+
   </section>
 
-  <!-- PORTALES -->
+
+
+  <!-- =========================
+       PORTALES
+  ========================= -->
+
   <section class="portales" id="portales">
+
     <div class="portales-grid">
 
-      <a class="portal-card" href="https://www.linkedin.com/jobs/search/?location=Murcia%2C%20España" target="_blank">
-        <div class="portal-logo" style="background:#e8f4fb; color:#0077b5;">Li</div>
-        <div class="portal-name">LinkedIn</div>
-        <div class="portal-type">Perfiles profesionales</div>
+
+      <!-- LINKEDIN -->
+
+      <a
+        class="portal-card"
+        href="https://www.linkedin.com/jobs/search/?location=Murcia%2C%20España"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div
+          class="portal-logo"
+          style="background:#e8f4fb; color:#0077b5;"
+        >
+          Li
+        </div>
+
+        <div class="portal-name">
+          LinkedIn
+        </div>
+
+        <div class="portal-type">
+          Perfiles profesionales
+        </div>
+
       </a>
 
-      <a class="portal-card" href="https://www.infojobs.net/ofertas-trabajo/murcia" target="_blank">
-        <div class="portal-logo" style="background:#fff0eb; color:#FF6B35;">IJ</div>
-        <div class="portal-name">InfoJobs</div>
-        <div class="portal-type">Portal nº1 en España</div>
+
+
+      <!-- INFOJOBS -->
+
+      <a
+        class="portal-card"
+        href="https://www.infojobs.net/ofertas-trabajo/murcia"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div
+          class="portal-logo"
+          style="background:#fff0eb; color:#FF6B35;"
+        >
+          IJ
+        </div>
+
+        <div class="portal-name">
+          InfoJobs
+        </div>
+
+        <div class="portal-type">
+          Portal nº1 en España
+        </div>
+
       </a>
 
-      <a class="portal-card" href="https://es.indeed.com/trabajo?q=&l=Murcia" target="_blank">
-        <div class="portal-logo" style="background:#e8f0fe; color:#2557a7;">In</div>
-        <div class="portal-name">Indeed</div>
-        <div class="portal-type">Agregador mundial</div>
+
+
+      <!-- INDEED -->
+
+      <a
+        class="portal-card"
+        href="https://es.indeed.com/trabajo?q=&l=Murcia"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div
+          class="portal-logo"
+          style="background:#e8f0fe; color:#2557a7;"
+        >
+          In
+        </div>
+
+        <div class="portal-name">
+          Indeed
+        </div>
+
+        <div class="portal-type">
+          Agregador mundial
+        </div>
+
       </a>
 
-      <a class="portal-card" href="https://www.jobtoday.com/es/jobs/murcia" target="_blank">
-        <div class="portal-logo" style="background:#fff8e1; color:#f59e0b;">Jt</div>
-        <div class="portal-name">JobToday</div>
-        <div class="portal-type">Incorporación inmediata</div>
+
+
+      <!-- JOBTODAY -->
+
+      <a
+        class="portal-card"
+        href="https://www.jobtoday.com/es/jobs/murcia"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div
+          class="portal-logo"
+          style="background:#fff8e1; color:#f59e0b;"
+        >
+          Jt
+        </div>
+
+        <div class="portal-name">
+          JobToday
+        </div>
+
+        <div class="portal-type">
+          Incorporación inmediata
+        </div>
+
       </a>
+
 
     </div>
-    <p class="portales-note">Próximamente añadiremos más portales de empleo.</p>
+
+
+    <p class="portales-note">
+      Próximamente añadiremos más portales de empleo.
+    </p>
+
   </section>
 
-  <!-- CTA ASESORÍA -->
+
+
+  <!-- =========================
+       OFERTAS DESTACADAS DEL DÍA
+  ========================= -->
+
+  <section class="ofertas" id="ofertas">
+
+    <div class="ofertas-inner">
+
+
+      <div class="ofertas-header">
+
+        <span class="ofertas-label">
+          🔎 Selección MurciaJobs
+        </span>
+
+        <h2>
+          Ofertas destacadas de hoy
+        </h2>
+
+        <p>
+          Hemos seleccionado algunas oportunidades de empleo
+          interesantes en Murcia. Accede directamente a la oferta
+          y presenta tu candidatura.
+        </p>
+
+      </div>
+
+
+
+      <div class="empleos-list">
+
+
+        <!-- =====================
+             OFERTA 1
+        ====================== -->
+
+        <article class="empleo-card">
+
+          <div class="empleo-top">
+
+            <div class="empleo-icon">
+              🅿️
+            </div>
+
+            <div class="empleo-info">
+
+              <h3>
+                Encargado/a de aparcamiento
+              </h3>
+
+              <div class="empleo-empresa">
+                Oferta de empleo · Murcia
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="empleo-details">
+
+            <span class="empleo-tag">
+              📍 Murcia
+            </span>
+
+            <span class="empleo-tag">
+              🕐 Buen horario
+            </span>
+
+            <span class="empleo-tag">
+              👤 Encargado/a
+            </span>
+
+          </div>
+
+
+          <p class="empleo-description">
+            Se busca una persona para trabajar como encargado/a
+            de aparcamiento en Murcia. Una oportunidad interesante
+            para personas con experiencia y capacidad de organización.
+          </p>
+
+
+          <a
+            class="empleo-btn"
+            href="https://www.infojobs.net/murcia/encargado-aparcamiento/of-i9750cffe374523831c08ecaa470630?applicationOrigin=search-new%7Celement%7E4746856512&searchId=4746856512&page=1&sortBy=PUBLICATION_DATE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver oferta e inscribirme →
+          </a>
+
+
+          <div class="empleo-source">
+            Oferta publicada en InfoJobs
+          </div>
+
+        </article>
+
+
+
+        <!-- =====================
+             OFERTA 2
+        ====================== -->
+
+        <article class="empleo-card">
+
+          <div class="empleo-top">
+
+            <div class="empleo-icon">
+              📋
+            </div>
+
+            <div class="empleo-info">
+
+              <h3>
+                Administrativo/a de seguros
+              </h3>
+
+              <div class="empleo-empresa">
+                Empresa del sector seguros · Murcia
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="empleo-details">
+
+            <span class="empleo-tag">
+              📍 Murcia
+            </span>
+
+            <span class="empleo-tag">
+              💼 Administración
+            </span>
+
+            <span class="empleo-tag">
+              🛡️ Seguros
+            </span>
+
+          </div>
+
+
+          <p class="empleo-description">
+            Empresa del sector seguros busca incorporar un/a
+            administrativo/a. Una oportunidad para profesionales
+            interesados en desarrollar su carrera en el ámbito
+            administrativo y asegurador.
+          </p>
+
+
+          <a
+            class="empleo-btn"
+            href="https://www.infojobs.net/murcia/administrativo-seguros/of-i91fb074bab4005997414a09be7bce2?applicationOrigin=search-new%7Celement%7E4746856512&searchId=4746856512&page=3&sortBy=PUBLICATION_DATE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver oferta e inscribirme →
+          </a>
+
+
+          <div class="empleo-source">
+            Oferta publicada en InfoJobs
+          </div>
+
+        </article>
+
+
+
+        <!-- =====================
+             OFERTA 3
+        ====================== -->
+
+        <article class="empleo-card">
+
+          <div class="empleo-top">
+
+            <div class="empleo-icon">
+              🎬
+            </div>
+
+            <div class="empleo-info">
+
+              <h3>
+                Personal para cine
+              </h3>
+
+              <div class="empleo-empresa">
+                Cinesa · Murcia
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="empleo-details">
+
+            <span class="empleo-tag">
+              📍 Murcia
+            </span>
+
+            <span class="empleo-tag">
+              🎬 Cine
+            </span>
+
+            <span class="empleo-tag">
+              👥 Diferentes tareas
+            </span>
+
+          </div>
+
+
+          <p class="empleo-description">
+            Se busca personal para trabajar en cine realizando
+            diferentes tareas. Una oportunidad para personas
+            interesadas en incorporarse al sector del ocio y
+            entretenimiento.
+          </p>
+
+
+          <a
+            class="empleo-btn"
+            href="https://cinesa-uci.jobtrain.co.uk/Job/JobDetail?JobId=1638&source=JobtrainIndeed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver oferta e inscribirme →
+          </a>
+
+
+          <div class="empleo-source">
+            Oferta publicada en la plataforma de empleo de Cinesa
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CTA ASESORÍA
+  ========================= -->
+
   <section class="cta-asesoria">
+
     <div class="cta-inner">
-      <h2>¿Necesitas orientación personalizada?</h2>
-      <p>Si llevas tiempo buscando sin resultados, te ayudo a trazar un plan concreto como técnico de RR.HH. en activo.</p>
-      <a href="https://miguelcavalopez.github.io/coach-laboral/" target="_blank" rel="noopener noreferrer" class="cta-btn">Servicio de asesoría →</a>
+
+      <h2>
+        ¿Necesitas orientación personalizada?
+      </h2>
+
+      <p>
+        Si llevas tiempo buscando sin resultados,
+        te ayudo a trazar un plan concreto como técnico
+        de RR.HH. en activo.
+      </p>
+
+      <a
+        href="https://miguelcavalopez.github.io/coach-laboral/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-btn"
+      >
+        Servicio de asesoría →
+      </a>
+
     </div>
+
   </section>
 
-  <!-- FOOTER -->
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    <div class="footer-copy">© 2025 MurciaJobs · Conecta talento local · Hecho en Murcia 🌶️</div>
+
+    <div class="footer-copy">
+      © 2026 MurciaJobs · Conecta talento local · Hecho en Murcia 🍋    </div>
+
   </footer>
+
 
 </body>
 </html>
+```
