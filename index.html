@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MurciaJobs: ofertas de empleo seleccionadas en Murcia, acceso a portales y consejos para tu búsqueda de trabajo.">
   <title>MurciaJobs · Conecta talento local</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -436,11 +437,21 @@
 
     }
 
-  </style>
+  
+/* Navegación y blog MurciaJobs */
+.site-nav{background:#fff;border-bottom:1px solid var(--gray-200);position:relative;z-index:5}
+.nav-inner{max-width:1100px;margin:auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.nav-brand{font-family:Sora,sans-serif;font-weight:800;color:var(--navy);text-decoration:none;font-size:19px}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap}.nav-links a{font-size:13px;font-weight:700;color:var(--navy);text-decoration:none}.nav-links a:hover{color:#138f84}
+.blog-section{padding:66px 24px;background:#fff}.blog-inner{max-width:1060px;margin:auto}.blog-heading{text-align:center;max-width:660px;margin:0 auto 30px}.blog-heading h2,.page-heading h1{font-family:Sora,sans-serif;color:var(--navy);font-size:clamp(25px,4vw,36px);line-height:1.25;margin:10px 0}.blog-heading p,.page-heading p{color:#65708e;font-size:15px}.eyebrow{display:inline-block;color:#168f84;background:#e8faf6;border-radius:30px;padding:6px 13px;font-size:12px;font-weight:800;letter-spacing:.04em}.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.blog-card{background:#fff;border:1px solid var(--gray-200);border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(17,29,74,.04)}.blog-art{height:128px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,#eaf3ff,#e8faf6)}.blog-card-content{padding:22px}.blog-card h3{font-family:Sora,sans-serif;color:var(--navy);font-size:17px;line-height:1.4;margin:12px 0}.blog-card p{color:#65708e;font-size:13px}.blog-link{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;border-radius:10px;padding:12px 22px;font-weight:700;font-size:13px;margin-top:24px}.blog-link:hover{background:#273f92}.blog-cta{text-align:center}.page-heading{background:linear-gradient(155deg,var(--navy-dark),var(--navy));padding:65px 24px;text-align:center}.page-heading h1{color:#fff}.page-heading p{color:#d9e4fa;max-width:680px;margin:auto}.blog-main{max-width:1060px;margin:auto;padding:52px 24px 70px}.notice{border:1px solid #ccebe6;background:#f0fbf8;padding:20px;border-radius:15px;color:#285b60;margin-top:25px}.footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}.footer-links a{color:#e0e8ff;text-decoration:none;font-size:12px}.footer-links a:hover{text-decoration:underline}.article-body{max-width:760px;margin:auto;background:white;padding:35px;border:1px solid var(--gray-200);border-radius:18px}.article-body h2{font-family:Sora,sans-serif;color:var(--navy);margin:26px 0 12px}.article-body p{margin:0 0 16px}.article-body ul{padding-left:23px;margin-bottom:16px}
+@media(max-width:700px){.blog-grid{grid-template-columns:1fr}.nav-inner{justify-content:center}.nav-links{justify-content:center;gap:13px}.blog-art{height:110px}.article-body{padding:22px}}
+
+</style>
 </head>
 
 
 <body>
+<nav class="site-nav" aria-label="Navegación principal"><div class="nav-inner"><a class="nav-brand" href="./">Murcia<span style="color:#078bea">jobs</span></a><div class="nav-links"><a href="#ofertas">Ofertas de hoy</a><a href="#portales">Portales</a><a href="./blog/">Blog</a><a href="#asesoria">Orientación laboral</a></div></div></nav>
 
 
   <!-- =========================
@@ -851,11 +862,18 @@
 
 
 
+
+<section class="blog-section" id="blog"><div class="blog-inner"><div class="blog-heading"><span class="eyebrow">APRENDE Y AVANZA</span><h2>El blog de MurciaJobs</h2><p>Consejos prácticos sobre currículum, entrevistas y búsqueda de empleo. Pronto publicaremos nuestros primeros artículos.</p></div><div class="blog-grid">
+<article class="blog-card"><div class="blog-art" aria-hidden="true">📄</div><div class="blog-card-content"><span class="eyebrow">CURRÍCULUM</span><h3>Prepara tu candidatura</h3><p>Recursos para presentar tu experiencia y destacar tus habilidades.</p></div></article>
+<article class="blog-card"><div class="blog-art" aria-hidden="true">🤝</div><div class="blog-card-content"><span class="eyebrow">ENTREVISTAS</span><h3>Conoce los procesos de selección</h3><p>Claves para afrontar las entrevistas con más preparación.</p></div></article>
+<article class="blog-card"><div class="blog-art" aria-hidden="true">📍</div><div class="blog-card-content"><span class="eyebrow">EMPLEO LOCAL</span><h3>Trabajar en la Región de Murcia</h3><p>Información útil para orientar tu búsqueda en nuestro entorno.</p></div></article>
+</div><div class="blog-cta"><a class="blog-link" href="./blog/">Visitar el blog →</a></div></div></section>
+
   <!-- =========================
        CTA ASESORÍA
   ========================= -->
 
-  <section class="cta-asesoria">
+  <section class="cta-asesoria" id="asesoria">
 
     <div class="cta-inner">
 
@@ -888,7 +906,7 @@
        FOOTER
   ========================= -->
 
-  <footer>
+  <footer><div class="footer-links"><a href="./">Inicio</a><a href="./blog/">Blog</a><a href="#ofertas">Ofertas</a></div>
 
     <div class="footer-copy">
       © 2026 MurciaJobs · Conecta talento local · Hecho en Murcia 🍋    </div>
