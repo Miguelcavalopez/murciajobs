@@ -1,0 +1,11 @@
+MURCIAJOBS - ACTUALIZACIÓN
+
+Copia cada archivo respetando las carpetas del ZIP en la raíz de tu repositorio GitHub. NO borres los archivos HTML de artículos que ya existen en /blog/.
+
+PENDIENTE ANTES DE PUBLICAR COMO DEFINITIVAS LAS PÁGINAS LEGALES:
+- Completar identificación y medio de contacto adecuado del responsable, según obligaciones aplicables.
+- Verificar servicios, finalidades, destinatarios, bases legales, plazos y cookies reales.
+- Configurar CMP certificada por Google cuando corresponda; las páginas de cookies y privacidad NO sustituyen el consentimiento técnico.
+- Revisar los enlaces de ofertas, que pueden haber caducado.
+- La página 404.html se usa automáticamente en GitHub Pages para errores 404 del sitio.
+- El carrusel permite desplazamiento táctil, con ratón y botones.
